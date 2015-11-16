@@ -46,7 +46,7 @@
   <ItemGroup>
     <Compile Include="Dump.cs" />
     <Compile Include="DumpHtmlWriter.cs" />
-    <Compile Include="EmbeddedResources.cs">
+    <Compile Include="Properties\EmbeddedResources.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EmbeddedResources.tt</DependentUpon>
@@ -60,7 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Style.css" />
-    <Content Include="EmbeddedResources.tt">
+    <Content Include="Properties\EmbeddedResources.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>EmbeddedResources.cs</LastGenOutput>
     </Content>
