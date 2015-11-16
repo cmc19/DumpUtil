@@ -1,0 +1,68 @@
+﻿body {
+    margin: 0.3em 0.3em 0.4em 0.4em;
+    font-family: Verdana;
+    font-size: 75%;
+    background: white;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #17b;
+    margin: 0.3em 0.2em;
+}
+
+td, th {
+    vertical-align: top;
+    border: 1px solid #aaa;
+    padding: 0.1em 0.2em;
+    margin: 0;
+}
+
+th {
+    text-align: left;
+    background-color: #ddd;
+    border: 1px solid #777;
+    font-family: tahoma;
+    font-size: 90%;
+    font-weight: bold;
+}
+
+    th.o {
+        background-color: #bbb;
+    }
+
+        th.o .type {
+            color: teal;
+        }
+
+
+.goto,.expandtext {
+    background: green;
+    cursor: pointer;
+}
+
+.red-border {
+    border: solid 3px red;
+}
+
+i {
+    color: green;
+}
+
+em {
+    color: red;
+}
+
+.h {
+    display: none !important;
+}
+
+/*.s {
+    display: block;
+}*/
+
+span.b{
+    color:blue;
+     font-family:Consolas, monospace;
+}
+

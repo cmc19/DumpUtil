@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DumpUtil", "DumpUtil\DumpUtil.csproj", "{07777229-BE67-4010-A3FF-00E866B3A67D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DumpUtil.Aio", "DumpUtil.Aio\DumpUtil.Aio.csproj", "{333CC373-11E6-4122-A088-6385DED1F227}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07777229-BE67-4010-A3FF-00E866B3A67D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07777229-BE67-4010-A3FF-00E866B3A67D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07777229-BE67-4010-A3FF-00E866B3A67D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07777229-BE67-4010-A3FF-00E866B3A67D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{333CC373-11E6-4122-A088-6385DED1F227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{333CC373-11E6-4122-A088-6385DED1F227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{333CC373-11E6-4122-A088-6385DED1F227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{333CC373-11E6-4122-A088-6385DED1F227}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
