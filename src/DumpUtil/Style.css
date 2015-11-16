@@ -36,7 +36,7 @@ th {
         }
 
 
-.goto,.expandtext {
+.goto, .expandtext {
     background: green;
     cursor: pointer;
 }
@@ -61,8 +61,14 @@ em {
     display: block;
 }*/
 
-span.b{
-    color:blue;
-     font-family:Consolas, monospace;
+span.b {
+    color: blue;
+    font-family: Consolas, monospace;
 }
 
+kbd {
+    /* Enum */
+    padding: 2px;
+    border-radius: 4px;
+    border: 1px solid black;
+}

@@ -92,14 +92,8 @@
 
             writer.Tag("style", s =>
             {
-                //s.WriteRaw(@"body {	margin: 0.3em 0.3em 0.4em 0.4em;	font-family: Verdana;	font-size: 80%;	background: white;}");
-                //s.WriteRaw(@"table {border-collapse: collapse;	border: 1px solid #17b;	margin: 0.3em 0.2em;}");
-                //s.WriteRaw(@"td, th {	vertical-align: top;	border: 1px solid #aaa;	padding: 0.1em 0.2em;	margin: 0;}");
-                //s.WriteRaw(@"th {	text-align: left;	background-color: #ddd;	border: 1px solid #777;	font-family: tahoma;	font-size:90%;	font-weight: bold;}");
-                //s.WriteRaw(@".goto{background:green; cursor:pointer; }");
-                //s.WriteRaw(@".red-border{border:solid 10px red;}");
-                //s.WriteRaw(@"i { color: green; }em { color: red; }");
-                s.WriteRaw(System.Text.Encoding.Default.GetString(Res.Style));
+                s.NewLineAfterSTag = false;
+                s.WriteRaw(Res.Style);
             });
         }
 
@@ -107,7 +101,8 @@
         {
             writer.WriteRaw("<script>");
 
-            writer.WriteRaw(System.Text.Encoding.Default.GetString(Res.Javascript));
+         //   writer.WriteRaw(System.Text.Encoding.Default.GetString(Res.Javascript));
+            writer.WriteRaw(Res.Script);
 
             writer.WriteRaw("</script>");
         }
@@ -120,11 +115,7 @@
                 state = state.BumpLevel();
             }
 
-            if (oType.IsEnum)
-            {
-                writer.WriteString("enum");
-                return;
-            }
+
 
             if (refDict == null) refDict = new RefDictionary();
 

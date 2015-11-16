@@ -6,13 +6,13 @@
 <#@ import namespace="System.Text.RegularExpressions" #>
 <#@ Assembly Name="EnvDTE" #>
 <#@ import namespace="System.Collections.Generic" #>
-<#@ output extension=".cs" #>
+<#@ output extension=".txt" #>
 <#
-var js = File.ReadAllText(Path.Combine(GetSolutionDirectory(), "DumpUtil", "Dump.js"));
-var css = File.ReadAllText(Path.Combine(GetSolutionDirectory(), "DumpUtil", "Dump.css"));
+var js = File.ReadAllText(Path.Combine(GetSolutionDirectory(), "DumpUtil", "Script.js"));
+var css = File.ReadAllText(Path.Combine(GetSolutionDirectory(), "DumpUtil", "Style.css"));
 
      var min = new JavaScriptMinifier();
-js = min.Minify(Path.Combine(GetSolutionDirectory(), "DumpUtil", "Dump.js"));
+js = min.Minify(Path.Combine(GetSolutionDirectory(), "DumpUtil", "Script.js"));
 
 #>
 namespace DumpUtil
