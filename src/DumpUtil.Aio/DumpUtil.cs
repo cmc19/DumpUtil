@@ -5,49 +5,13 @@
 
 namespace DumpUtil
 {
-    #region (using)
+
     using System;
     using System.Collections;
     using System.Collections.Generic;
     using System.Linq;
     using System.Reflection;
-    using System.Runtime.Serialization;
     using Html;
-    #endregion
-
-    #region Dump
-
-
-    #region RefDictionary
-
-    sealed class RefDictionary
-    {
-        readonly HashSet<long> _set = new HashSet<long>();
-        readonly ObjectIDGenerator _gen = new ObjectIDGenerator();
-
-        public bool Add(object o)
-        {
-            if (o == null) return true;
-            if (o.GetType().IsClass == false) return true;
-
-            bool firstTime;
-            var x = _gen.GetId(o, out firstTime);
-            return _set.Add(x);
-
-        }
-
-        public long? GetID(object o)
-        {
-            if (o == null) return null;
-            if (o.GetType().IsClass == false) return null;
-
-            bool firstTime;
-            return _gen.GetId(o, out firstTime);
-        }
-    }
-
-    #endregion
-
 
     #region DumpState
 
@@ -549,7 +513,6 @@ namespace DumpUtil
     }
     #endregion
 
-    #endregion
 
     #region MiscUtil
     public static class DumpUtilites
@@ -672,40 +635,6 @@ namespace DumpUtil
         }
     }
     #endregion
-}
-
-
-// C:\Users\ccarisch\Documents\GitHub\DumpUtil\src\DumpUtil\DumpHtmlWriter.cs
-
-
-namespace DumpUtil
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using Html;
-
-    public class DumpHtmlWriter : HtmlWriter
-    {
-
-        public void WriteStyles()
-        {
-            DumpManager.WriteStyle(this);
-        }
-
-        public void WriteJavaScript()
-        {
-            DumpManager.WriteScript(this);
-        }
-
-        public void Dump(object obj)
-        {
-            DumpManager.Dump(obj, this);
-            WriteRaw("<br />");
-        }
-    }
 }
 
 
@@ -1478,6 +1407,40 @@ namespace DumpUtil
     }
 }
 
+// C:\Users\ccarisch\Documents\GitHub\DumpUtil\src\DumpUtil\Html\DumpHtmlWriter.cs
+
+
+namespace DumpUtil.Html
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using Html;
+
+    public class DumpHtmlWriter : HtmlWriter
+    {
+
+        public void WriteStyles()
+        {
+            DumpManager.WriteStyle(this);
+        }
+
+        public void WriteJavaScript()
+        {
+            DumpManager.WriteScript(this);
+        }
+
+        public void Dump(object obj)
+        {
+            DumpManager.Dump(obj, this);
+            WriteRaw("<br />");
+        }
+    }
+}
+
+
 // C:\Users\ccarisch\Documents\GitHub\DumpUtil\src\DumpUtil\Html\HtmlHead.cs
 
 namespace DumpUtil.Html
@@ -1834,6 +1797,40 @@ namespace DumpUtil
     //}
 }
 
+
+// C:\Users\ccarisch\Documents\GitHub\DumpUtil\src\DumpUtil\Utility\RefDictionary.cs
+
+namespace DumpUtil
+{
+    using System.Collections.Generic;
+    using System.Runtime.Serialization;
+
+    sealed class RefDictionary
+    {
+        readonly HashSet<long> _set = new HashSet<long>();
+        readonly ObjectIDGenerator _gen = new ObjectIDGenerator();
+
+        public bool Add(object o)
+        {
+            if (o == null) return true;
+            if (o.GetType().IsClass == false) return true;
+
+            bool firstTime;
+            var x = _gen.GetId(o, out firstTime);
+            return _set.Add(x);
+
+        }
+
+        public long? GetID(object o)
+        {
+            if (o == null) return null;
+            if (o.GetType().IsClass == false) return null;
+
+            bool firstTime;
+            return _gen.GetId(o, out firstTime);
+        }
+    }
+}
 
 
 namespace DumpUtil

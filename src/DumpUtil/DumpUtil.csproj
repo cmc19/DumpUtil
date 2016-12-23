@@ -45,7 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dump.cs" />
-    <Compile Include="DumpHtmlWriter.cs" />
+    <Compile Include="Html\DumpHtmlWriter.cs" />
     <Compile Include="Html\HtmlHead.cs" />
     <Compile Include="Html\HtmlRow.cs" />
     <Compile Include="Html\HtmlTable.cs" />
@@ -60,6 +60,7 @@
       <DependentUpon>EmbeddedResources.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\RefDictionary.cs" />
     <Compile Include="Types\EnumDumpType.cs" />
   </ItemGroup>
   <ItemGroup>

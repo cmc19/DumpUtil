@@ -1,5 +1,5 @@
 ﻿
-namespace DumpUtil
+namespace DumpUtil.Html
 {
     using System;
     using System.Collections.Generic;

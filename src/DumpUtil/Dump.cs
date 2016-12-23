@@ -1,48 +1,12 @@
 ﻿namespace DumpUtil
 {
-    #region (using)
+
     using System;
     using System.Collections;
     using System.Collections.Generic;
     using System.Linq;
     using System.Reflection;
-    using System.Runtime.Serialization;
     using Html;
-    #endregion
-
-    #region Dump
-
-
-    #region RefDictionary
-
-    sealed class RefDictionary
-    {
-        readonly HashSet<long> _set = new HashSet<long>();
-        readonly ObjectIDGenerator _gen = new ObjectIDGenerator();
-
-        public bool Add(object o)
-        {
-            if (o == null) return true;
-            if (o.GetType().IsClass == false) return true;
-
-            bool firstTime;
-            var x = _gen.GetId(o, out firstTime);
-            return _set.Add(x);
-
-        }
-
-        public long? GetID(object o)
-        {
-            if (o == null) return null;
-            if (o.GetType().IsClass == false) return null;
-
-            bool firstTime;
-            return _gen.GetId(o, out firstTime);
-        }
-    }
-
-    #endregion
-
 
     #region DumpState
 
@@ -544,7 +508,6 @@
     }
     #endregion
 
-    #endregion
 
     #region MiscUtil
     public static class DumpUtilites
