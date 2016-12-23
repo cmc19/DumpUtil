@@ -19,8 +19,11 @@ namespace DumpUtil
 {
     static class Res
     {
-        public static byte[] Javascript = new byte[] { <#= ToByteArray(DoJs2(js)) #>};
-        public static byte[] Style = new byte[] { <#= ToByteArray(DoCss( css)) #>};
+        public static string Script = 
+                 System.Text.Encoding.ASCII.GetString(new byte[] { <#= ToByteArray(DoJs2(js)) #>}) ;
+        public static string Style =
+				 System.Text.Encoding.ASCII.GetString(new byte[] { <#= ToByteArray(DoCss( css)) #>})
+		 ;
     }
 }
 <#+

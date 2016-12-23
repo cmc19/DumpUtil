@@ -6,7 +6,7 @@ namespace DumpUtil
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
-
+    using Html;
 
     abstract class BaseEnumDumpType:DumpType
     {
