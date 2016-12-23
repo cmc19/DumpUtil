@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Types\BoolDump.cs" />
     <Compile Include="Dump.cs" />
     <Compile Include="Html\DumpHtmlWriter.cs" />
     <Compile Include="Html\HtmlHead.cs" />
